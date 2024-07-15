@@ -12,95 +12,107 @@
 
     <link rel="stylesheet" href=" {% static 'app/css/style.css' %}">
     <link rel="stylesheet" href=" {% static 'app/css/all.min.css' %}">
-   
+
     <link reil="stylesheet" href=" {% static 'app/css/owl.carousel.css' %}">
-    
-    <title>Dary product| {% block title %}{% endblock %}
+
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Rubber products| {% block title %}{% endblock %}
 
     </title>
 </head>
 
 <body>
 
+    <section id="nav-bar fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'app/images/drg-logo4.jpeg' %} " width='120' height='120' alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="{%url 'about'%}" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                About us
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'about'%}">Mision and Vision</a></li>
+                                <li><a class="dropdown-item" href="">History</a></li>
+                                <li><a class="dropdown-item" href="">Sustainability</a></li>
+                                <li><a class="dropdown-item" href="">Careers</a></li>
+                                <li><a class="dropdown-item" href="">News and Events</a></li>
+                                <li><a class="dropdown-item" href="">Our Location</a></li>
+                                <li><a class="dropdown-item" href="">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Products
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'category' 'cb'%}">Cabro</a></li>
+                                <li><a class="dropdown-item" href="{% url 'category' 'tl'%}">Tiles</a></li>
+                                <li><a class="dropdown-item" href="{% url 'category' 'mt'%}">Mats</a></li>
+                                <li><a class="dropdown-item" href="{% url 'category' 'ss'%}">Shoe Soles</a></li>
+                            </ul>
+                        </li>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="{% static 'app/images/Neel.png' %} " width='70' height='50' alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <li class="nav-item">
+                            <a class="nav-link ">Contant us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success " type="submit">Search</button>
+                    </form>
+                </div>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <li class="nav-item dropdown mx-2">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa fa-user text-white w-50 h-50"  ></i>David
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="{% url 'profile'%}">profile</a></li>
+                            <li><a class="dropdown-item" href="#">Order</a></li>
+                            <li><a class="dropdown-item" href="{% url 'changepassword'%}">change password</a></li>
+                            <li><a class="dropdown-item" href="{% url 'logout'%}">logout</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            product
+                            Shop
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Cabro</a></li>
-                            <li><a class="dropdown-item" href="#">Tiles</a></li>
-                            <li><a class="dropdown-item" href="#">Mats</a></li>
-                            <li><a class="dropdown-item" href="#">Soles</a></li>
-
-
+                            <li><a class="dropdown-item" href="#">Cart</a></li>
+                            <li><a class="dropdown-item" href="#">Wishlist</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="{% url 'customerregistration' %}">Register</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="{% url 'login'%}">Login</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link disabled">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Contant us</a>
-                    </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown mx-2">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    David
-                </a>
-                <ul class="dropdown-menu" aria-labelledby = "profileDropdown">
-                    <li><a class="dropdown-item" href="#">profile</a></li>
-                    <li><a class="dropdown-item" href="#">Order</a></li>
-                    <li><a class="dropdown-item" href="#">change password</a></li>
-                    <li><a class="dropdown-item" href="#">logout</a></li>
+        </nav>
+    </section>
 
-
-                </ul>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">Cart</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">Wishlist</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">Register</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">Login</a>
-                </li>
-              
-            </ul>
-        </div>
-    </nav>
-
-    
 
     {% block banner_slider %}
 
@@ -108,9 +120,21 @@
 
     {% block product_1 %}
 
-    {% endblock  %}
-   
+    {% endblock %}
+
     {% block min-content %}
+
+    {% endblock %}
+
+    {% block main-content %}
+
+    {% endblock %}
+
+    {% block major-content %}
+
+    {% endblock %}
+
+    {% block history %}
 
     {% endblock %}
 
@@ -125,10 +149,51 @@
 
 
 
+    <footer class="container-fluid bg-dark text-center mt-5 p-2 text-white ">
+        <section id="forter">
+            <div class="container">
+                <div class="row forter_box">
 
-    <footer class="container-fluid bg-dark text-center mt-5 p-2 text-white fixed-bottom"> copyright: 2023|| Designed by David Onyango </footer> 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+                    <div class="col-md-4 forter_box">
+                        <h4 id="customer">find us on social media</h4>
+                        <div class="media">
+                           <a class="icon" href="#"><i class="fa fa-facebook  text-white" ></i></a> 
+                            <a href=""><i  class="fa fa-twitter text-white " ></i></a>
+                           <a href=""><i  class="fa fa-youtube-play  text-white" ></i></a> 
+                           <a href=""><i  class="fa fa-instagram  text-white" ></i></a> 
+                           <a href=""> <i class="fa fa-linkedin text-white" ></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 forter_box">
+                        <p><b>CONTACT US</b></p>
+                        <p><i class="fa fa-map-marker"></i>Dimvi Recycling Group</p>
+                        <P> <i class="fa fa-phone"></i>+254708712xxx</P>
+                        <P> <i class="fa fa-envelope-o"></i>drg@gmail.com</P>
+                    </div>
+
+                    <div class="col-md-4 forter_box">
+                        <p><b>SUBSCRIBE NEWS LETTER</b></p>
+                        <input type="email" class="form-control" placeholder=" Your email">
+                        <button type="button" class="btn btn-primary">subcribe</button>
+                    </div>
+
+                </div>
+                <hr>
+                <p class="copywrite">Terms and conditions </p>
+                <p class="copywrite">Copyright: 2024 </p>
+            </div>
+        </section>
+    </footer>
+    <!-- smoth scroll -->
+    <script src="{% static 'app/js/smooth-scroll.js' %}"></script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>

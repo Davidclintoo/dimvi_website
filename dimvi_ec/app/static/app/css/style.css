@@ -1,0 +1,157 @@
+*body{
+    padding: 0;
+    margin: 0;
+}
+
+
+.goodnessseccont img{
+    height:100px ;
+    width:100px ;
+   
+ 
+}
+/* banner sectin */
+#banner{
+ margin-top:10% ;
+}
+/* end */
+
+/* nav section */
+
+#nav_bar {
+        position: sticky;
+        top: 0;
+        z-index: 15px;
+    }
+    
+.navbar a {
+        /* color: orangered; */
+        text-transform: uppercase;
+        font-size: 30px;
+    
+    
+    }
+    
+.navbar .fa {
+        color: whitesmoke;
+        background-color: rgb(0, 255, 0);
+    }
+    
+.navbar-nav li {
+        padding: 0 12px;
+    }
+    
+.navbar-nav li a {
+        color: darkgrey !important; 
+        font-size: 14px;
+        font-weight: bold;
+        text-align: right;
+        transition: 0.2s;
+    
+    
+    }
+    
+    
+.navbar-nav li a:hover {
+        color: rgb(0, 255, 0) !important;
+        z-index: 2px;
+    
+    
+    }
+.navbar ul li a :hover {
+        transition: 0.4s ease;
+        background-color: whitesmoke;
+    }
+
+/* end of nav */
+
+/* category */
+#cate{
+    margin-top:10% ;
+}
+/* end of category */
+
+/* about section */
+#mission-vision{
+    margin-top: 5%;
+}
+.card-title {
+    color: rgb(11, 11, 11);
+    text-align: center;
+}
+
+.card :hover {
+    transition: 0.4s ease;
+    color: rgb(0, 255, 0);
+    cursor: pointer;
+}
+/* end of about */
+/* footer section  */
+#forter {
+    color: white;
+    
+
+}
+
+.forter_box {
+    padding: 20px;
+}
+
+/* .forter_box .fa {
+    margin-right: 8px;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #27ba17, #308217);
+
+
+} */
+
+.forter_box .form-control {
+    border: none;
+    max-width: 250px;
+    box-shadow: none !important;
+    margin-top: 25px;
+    border-radius: 0;
+}
+
+.forter_box .btn-primary {
+    border: none;
+    box-shadow: none !important;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #42ba17, #258217);
+
+}
+
+.media .icon{
+    color: white;
+    text-decoration: none;
+}
+
+
+.media .fa {
+    color: white;
+    background-image: linear-gradient(to right, #42ba17, #42ba17); 
+    border-radius: 5px;
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    padding-top: 5px;
+    margin-top:5% ;
+}
+
+hr {
+    background-color: white;
+}
+
+.copywrite {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    text-align: center;
+}
+/* end of footer section */
