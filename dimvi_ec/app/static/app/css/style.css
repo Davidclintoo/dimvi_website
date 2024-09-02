@@ -7,8 +7,6 @@
 .goodnessseccont img{
     height:100px ;
     width:100px ;
-   
- 
 }
 /* banner sectin */
 #banner{
@@ -74,17 +72,19 @@
 /* about section */
 #mission-vision{
     margin-top: 5%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), 50%, rgba(0, 0, 0, 0.5), 50%), url("% static 'app/images/maxresdefault.jpg'% ");
+    display: block;
 }
 .card-title {
     color: rgb(11, 11, 11);
     text-align: center;
 }
 
-.card :hover {
+/* #card :hover {
     transition: 0.4s ease;
     color: rgb(0, 255, 0);
     cursor: pointer;
-}
+} */
 /* end of about */
 /* footer section  */
 #forter {

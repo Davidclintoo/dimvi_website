@@ -81,4 +81,13 @@ class Customer(models.Model):
     zipcode = models.IntegerField()
     county = models.CharField(choices=STATE_CHOICES, max_length=100)
     def _str_(self):
-        return self.name 
+        return self.name
+
+class Cart(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)
+    
+    @property
+    def total_cost(self):
+        return  self.quantity * self.product.discounted_price

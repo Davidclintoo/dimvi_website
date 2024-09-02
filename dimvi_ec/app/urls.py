@@ -15,6 +15,13 @@ urlpatterns = [
     path('address/', views.address, name='address'),
     path('updateAdress/<int:pk>', views.UpdateAdress.as_view(), name='updateAdress'),
     
+    #add to cart 
+    
+    path('add_to_cart/', views.add_to_cart, name= 'add_to_cart'),
+    path('cart/', views.show_cart, name='showcart'),
+    path('checkout/', views.show_cart, name='checkout'),
+    path('plus_cart/', views.plus_cart),
+     path('minus_cart/', views.minus_cart),
     # login registration
     path("registration/", views.CustomerRegistrationView.as_view(),
          name='customerregistration'),

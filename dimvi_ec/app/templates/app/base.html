@@ -38,6 +38,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        {% if request.user.is_authenticated %}
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
@@ -82,7 +83,7 @@
                     <li class="nav-item dropdown mx-2">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <i class="fa fa-user text-white w-50 h-50"  ></i>David
+                            <i class="fa fa-user text-white w-30 h-30"  ></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="profileDropdown">
                             <li><a class="dropdown-item" href="{% url 'profile'%}">profile</a></li>
@@ -101,12 +102,14 @@
                             <li><a class="dropdown-item" href="#">Wishlist</a></li>
                         </ul>
                     </li>
+                    {% else %}
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="{% url 'customerregistration' %}">Register</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="{% url 'login'%}">Login</a>
                     </li>
+                    {% endif %}
 
                 </ul>
             </div>
@@ -159,7 +162,7 @@
                         <div class="media">
                            <a class="icon" href="#"><i class="fa fa-facebook  text-white" ></i></a> 
                             <a href=""><i  class="fa fa-twitter text-white " ></i></a>
-                           <a href=""><i  class="fa fa-youtube-play  text-white" ></i></a> 
+                           <a href=""><i  class="fa fa-youtube  text-white" ></i></a> 
                            <a href=""><i  class="fa fa-instagram  text-white" ></i></a> 
                            <a href=""> <i class="fa fa-linkedin text-white" ></i></a>
                         </div>
@@ -169,7 +172,7 @@
                         <p><b>CONTACT US</b></p>
                         <p><i class="fa fa-map-marker"></i>Dimvi Recycling Group</p>
                         <P> <i class="fa fa-phone"></i>+254708712xxx</P>
-                        <P> <i class="fa fa-envelope-o"></i>drg@gmail.com</P>
+                        <P> <i class="fa fa-envelope"></i>drg@gmail.com</P>
                     </div>
 
                     <div class="col-md-4 forter_box">
@@ -185,7 +188,7 @@
             </div>
         </section>
     </footer>
-    <!-- smoth scroll -->
+    <!-- smooth scroll -->
     <script src="{% static 'app/js/smooth-scroll.js' %}"></script>
 
     <script>
@@ -201,9 +204,9 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script script="{% static 'app/js/all.min.js' %}"></script>
-    <script script="{% static 'app/js/myscript.js' %}"></script>
-    <script script="{% static 'app/js/owl.carousel.js' %}"></script>
+    <script src="{% static 'app/js/all.min.js' %}"></script>
+    <script src="{% static 'app/js/myscript.js' %}"></script>
+    <script src="{% static 'app/js/owl.carousel.js' %}"></script>
 </body>
 
 </html>
